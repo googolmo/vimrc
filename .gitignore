@@ -1,0 +1,5 @@
+.netrwhist
+yankring_history_v2.txt
+!bundle
+bundle/*
+!bundle/Vundle.vim/
