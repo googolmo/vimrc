@@ -6,11 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
 
 " custom plugins
 Plugin 'airblade/vim-gitgutter'
@@ -21,7 +20,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'bling/vim-airline'
 Plugin 'mustache/vim-mustache-handlebars'
-" Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'evanmiller/nginx-vim-syntax'
@@ -44,7 +43,6 @@ Plugin 'nvie/vim-flake8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -85,7 +83,7 @@ set wildmode=longest,list,full
 set cursorline
 set incsearch   " incremental search
 set nobackup    " no *~ backup files
-" set copyindent    " copy the previous indentation on autoindenting
+set copyindent    " copy the previous indentation on autoindenting
 set ignorecase    " ignore case when searching
 set smartcase   " ignore case if search pattern is all lowercase,case-sensitive otherwise
 set smarttab    " insert tabs on the start of a line according to context
@@ -116,6 +114,7 @@ if exists('$TMUX')  " Support resizing in tmux
     set ttymouse=xterm2
 endif
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType Makefile set noexpandtab
 " C/C++ specific settings
 autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
@@ -157,6 +156,9 @@ let g:yankring_history_dir = '~/.vim/'
 
 " vim-mustache-handlebars
 let g:mustache_operators = 0
+
+" flake-8
+autocmd BufWritePost *.py call Flake8()
 
 " Enable omni completion. (Ctrl-X Ctrl-O)
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
