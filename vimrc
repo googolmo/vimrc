@@ -32,7 +32,9 @@ Plugin 'slim-template/vim-slim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/greplace.vim'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'msanders/snipmate.vim'
+Plugin 'tomtom/tlib_vim'
 Plugin 'vim-scripts/indent-motion'
 Plugin 'vim-scripts/OmniCppComplete'
 " Plugin 'vim-scripts/pep8'
@@ -88,9 +90,9 @@ set ignorecase    " ignore case when searching
 set smartcase   " ignore case if search pattern is all lowercase,case-sensitive otherwise
 set smarttab    " insert tabs on the start of a line according to context
 set expandtab        "replace <TAB> with spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" set tabstop=4
+" set softtabstop=4
+" set shiftwidth=4
 
 
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
@@ -156,6 +158,10 @@ let g:yankring_history_dir = '~/.vim/'
 
 " vim-mustache-handlebars
 let g:mustache_operators = 0
+
+" super-tab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+" let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " flake-8
 autocmd BufWritePost *.py call Flake8()
