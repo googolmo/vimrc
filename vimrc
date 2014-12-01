@@ -39,7 +39,7 @@ Plugin 'vim-scripts/indent-motion'
 Plugin 'vim-scripts/OmniCppComplete'
 " Plugin 'vim-scripts/pep8'
 Plugin 'tpope/vim-cucumber'
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 Plugin 'nvie/vim-flake8'
 
 
