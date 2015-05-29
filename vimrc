@@ -164,6 +164,14 @@ let g:mustache_operators = 0
 let g:SuperTabDefaultCompletionType = "<c-n>"
 " let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
 " flake-8
 " autocmd BufWritePost *.py call Flake8()
 " autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
@@ -189,6 +197,8 @@ autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md set spell
+
+
 
 
 " Add the virtualenv's site-packages to vim path
