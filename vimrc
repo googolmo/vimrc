@@ -75,10 +75,10 @@ set listchars=tab:▸\ ,trail:▫
 set number                                                   " show line
 set ruler                                                    " show where you
 set scrolloff=3                                              " show context
-set shiftwidth=2                                             " normal mode
+set shiftwidth=4                                             " normal mode
 set showcmd
 set smartcase                                                " case-sensitive
-set softtabstop=2                                            " insert mode tab
+set softtabstop=4                                            " insert mode tab
 set tabstop=8                                                " actual tabs
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a
@@ -91,9 +91,6 @@ set ignorecase    " ignore case when searching
 set smartcase   " ignore case if search pattern is all lowercase,case-sensitive otherwise
 set smarttab    " insert tabs on the start of a line according to context
 set expandtab        "replace <TAB> with spaces
-" set tabstop=4
-" set softtabstop=4
-" set shiftwidth=4
 
 
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
