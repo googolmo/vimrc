@@ -41,6 +41,7 @@ Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'tpope/vim-cucumber'
 " Plugin 'ervandew/supertab'
 Plugin 'nvie/vim-flake8'
+Plugin 'fatih/vim-go'
 
 
 " All of your Plugins must be added before the following line
