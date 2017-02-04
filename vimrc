@@ -44,6 +44,7 @@ Plugin 'tpope/vim-cucumber'
 Plugin 'nvie/vim-flake8'
 Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
+Plugin 'elzr/vim-json'
 
 
 " All of your Plugins must be added before the following line
@@ -65,7 +66,7 @@ set autoindent
 set autoread                                                 " reload files
 set backspace=2                                              " Fix broken
 set backupcopy=yes                                           " see :help
-set clipboard=unnamedplus                                        " yank and paste
+set clipboard=unnamed                                        " yank and paste
 set directory-=.                                             " don't store
 set encoding=utf-8
 set expandtab                                                " expand tabs to
@@ -111,7 +112,7 @@ filetype plugin on    " Enable filetype-specific plugins
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " Enable basic mouse behavior such as resizing buffers.
-set mouse=a
+" set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
     set ttymouse=xterm2
 endif
@@ -134,6 +135,8 @@ map <leader>] :cn<CR>
 " move to the prev error
 map <leader>[ :cp<CR>
 
+vnoremap <C-c> "*y
+
 " --- move around splits {
 " move to and maximize the below split 
 map <C-J> <C-W>j<C-W>_
@@ -143,6 +146,9 @@ map <C-K> <C-W>k<C-W>_
 nmap <c-h> <c-w>h<c-w><bar>
 " move to and maximize the right split  
 nmap <c-l> <c-w>l<c-w><bar>
+
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
 
 " jedi-vim
 let g:jedi#goto_assignments_command = "<leader>g"
@@ -276,7 +282,16 @@ autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.md set spell
 
+au! BufRead,BufNewFile *.json set filetype=json
 
+augroup json_autocmd
+    autocmd!
+    autocmd FileType json set autoindent
+    autocmd FileType json set formatoptions=tcq2l
+    autocmd FileType json set textwidth=78 shiftwidth=2
+    autocmd FileType json set softtabstop=2 tabstop=2
+    autocmd FileType json set expandtab
+augroup END
 
 
 " Add the virtualenv's site-packages to vim path
