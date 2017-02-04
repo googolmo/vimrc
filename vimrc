@@ -9,7 +9,7 @@ call vundle#begin()
 " call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " custom plugins
 Plugin 'airblade/vim-gitgutter'
@@ -18,7 +18,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'austintaylor/vim-indentobject'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-ariline/vim-airline'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'godlygeek/tabular'
@@ -45,6 +45,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
 Plugin 'elzr/vim-json'
+Plugin 'wincent/command-t'
 
 
 " All of your Plugins must be added before the following line
