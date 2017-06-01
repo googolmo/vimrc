@@ -47,6 +47,7 @@ Plugin 'fatih/vim-go'
 Plugin 'othree/html5.vim'
 Plugin 'elzr/vim-json'
 Plugin 'wincent/command-t'
+Plugin 'udalov/kotlin-vim'
 
 
 " All of your Plugins must be added before the following line
