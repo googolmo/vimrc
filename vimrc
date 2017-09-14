@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'dracula/vim'
 Plugin 'austintaylor/vim-indentobject'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'davidhalter/jedi-vim'
@@ -105,7 +106,8 @@ syntax on   " syntax highlight
 set hlsearch    " search highlighting
 
 set background=dark
-colorscheme solarized
+" colorscheme dracula
+" colorscheme solarized
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
