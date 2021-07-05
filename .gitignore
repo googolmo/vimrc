@@ -3,3 +3,5 @@ yankring_history_v2.txt
 !bundle
 !bundle/Vundle.vim
 bundle/*
+autoload/*
+plugged/*
